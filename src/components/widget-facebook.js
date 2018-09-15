@@ -13,9 +13,9 @@ export default props => {
       <FacebookProvider appId={fbPageId}>
         <Page
           href={fanpage}
-          // dataWidth="100%"
+          dataWidth="100%"
           height="300px"
-          // dataAdaptContainerWidth="true"
+          dataAdaptContainerWidth="true"
         />
       </FacebookProvider>
     </WidgetContainer>

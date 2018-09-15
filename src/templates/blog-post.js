@@ -6,7 +6,6 @@ import WidgetContainer from "../components/widget-container";
 import PostInfo from "../components/post-info";
 import Share from "../components/share";
 import NavPost from "../components/nav-post";
-import FacebookProvider, { Comments } from 'react-facebook';
 
 const RowPostWrapper = ({ children }) => (
   <div
@@ -42,9 +41,6 @@ export default ({ data }) => {
           { property: 'twitter:title', content: `${seoTitle}` },
           { property: 'twitter:url', content: `${url}` },
           { property: `twitter:description`, content: `${post.excerpt}` },
-          // FB Comment
-          { property: "fb:app_id", content: `${data.site.siteMetadata.fbCommentId}` },
-          { property: "fb:admins", content: `${data.site.siteMetadata.fbId}`}
         ]}
         link={[
           { rel: "canonical", href: `${url}` }
@@ -101,16 +97,6 @@ export default ({ data }) => {
         </RowPostWrapper>
 
       </WidgetContainer>
-
-      <WidgetContainer>
-        <FacebookProvider appId={data.site.siteMetadata.fbCommentId}>
-          <Comments
-            href={url}
-            width="100%"
-            dataNumposts="5"
-          />
-        </FacebookProvider>
-      </WidgetContainer>
     </article>
   );
 };
@@ -153,8 +139,6 @@ export const query = graphql`
         title
         siteUrl
         twitterHandle
-        fbCommentId
-        fbId
       }
     }
   }
