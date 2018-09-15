@@ -18,6 +18,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-glamor`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: "gatsby-transformer-remark",
       options: {
