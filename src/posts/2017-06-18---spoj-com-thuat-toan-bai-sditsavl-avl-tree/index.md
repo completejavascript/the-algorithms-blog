@@ -8,7 +8,7 @@ keywords: "Thuật toán bài SDITSAVL"
 
 ## Đề bài
 
-Bài toán này là bài toán mở rộng (với một chút thay đổi) từ bài toán: [http://www.spoj.com/problems/SDITSBST/](http://www.spoj.com/problems/SDITSBST/). Trong bài toán này, bạn được đưa cho 2 loại query: 
+Bài toán này là bài toán mở rộng (với một chút thay đổi) từ bài toán: [SDITSBST](http://www.spoj.com/problems/SDITSBST/). Trong bài toán này, bạn được đưa cho 2 loại query: 
 
   * 1\. Chèn một số nguyên x vào list 
   * 2\. Cho số x. 

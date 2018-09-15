@@ -44,6 +44,7 @@ export default (props) => (
         <GridColumn sm="4" xs="12">
           <Link style={linkStyle} to={`/lien-he/`}>Liên hệ</Link>
           <Link style={linkStyle} to={`/gioi-thieu/`}>Giới thiệu</Link>
+          <Link style={linkStyle} to={`/`}>Trang chủ</Link>
         </GridColumn>
       </GridRow>
     </GridContainer>
