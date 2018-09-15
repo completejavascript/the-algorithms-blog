@@ -1,0 +1,61 @@
+/* Common */
+.share-btn {
+  width: 90px;
+  height: 30px;
+  border: 1px solid;
+  font-size: 0.85rem;
+  margin: 0.5rem 0.25rem;
+  display: inline-flex;
+  border-radius: 1rem;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-btn:hover {
+  cursor: pointer;
+}
+
+/* Facebook */
+.share-btn.facebook {
+  color: #3b5998;
+  border-color: #3b5998;
+}
+
+.share-btn.facebook:hover {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+/* twitter */
+.share-btn.twitter {
+  color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.share-btn.twitter:hover {
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+/* google */
+.share-btn.google {
+  color: #dd4b39;
+  border-color: #dd4b39;
+}
+
+.share-btn.google:hover {
+  background-color: #dd4b39;
+  color: #fff;
+}
+
+/* linkedin */
+.share-btn.linkedin {
+  color: #0077b5;
+  border-color: #0077b5;
+}
+
+.share-btn.linkedin:hover {
+  background-color: #0077b5;
+  color: #fff;
+}
