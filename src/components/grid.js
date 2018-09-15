@@ -5,6 +5,8 @@ export const GridContainer = styled.div`
   width: 1024px;
   max-width: 100%;
   margin: 0 auto;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
 `
 
 export const GridContainerFull = styled.div`

@@ -48,7 +48,7 @@ export default ({ data }) => {
         ]}
       />
 
-      <h1 style={{ marginBottom: `${rhythm(1 / 4)}` }}>
+      <h1 style={{ marginBottom: `${rhythm(1 / 4)}`, marginTop: `${rhythm(1 / 2)}` }}>
         {post.frontmatter.title}
       </h1>
 

@@ -3,15 +3,15 @@
   height: 2.5rem;
   background-color: #fff;
   outline: none;
-  border: 1px solid #0077b5;
-  color: #0077b5;
+  border: 1px solid #4078c0;
+  color: #4078c0;
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem;
 }
 
 .widget-search-btn:hover {
   cursor: pointer;
-  background-color: #0077b5;
+  background-color: #4078c0;
   color: #fff;
 }
 
@@ -27,5 +27,5 @@
 }
 
 .widget-search-input:focus {
-  border-color: #0077b5;
+  border-color: #4078c0;
 }
