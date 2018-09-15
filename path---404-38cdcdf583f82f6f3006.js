@@ -1,0 +1,2 @@
+webpackJsonp([0xe70826b53c04],{713:function(t,n){t.exports={data:{site:{siteMetadata:{title:"Algorithms Blog",subtitle:"Chia sẻ về thuật toán và lời giải các bài toán cơ bản",description:"Blog này được lập nên với mục đích chia sẻ những kiến thức và kinh nghiệm của bản thân về các thuật toán và lời giải các bài toán cơ bản trên các trang như spoj.com, acm.timus.ru,…",keywords:"thuat-toan, thuattoan, algorithms, spoj"}}},pathContext:{}}}});
+//# sourceMappingURL=path---404-38cdcdf583f82f6f3006.js.map
