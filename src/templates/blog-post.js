@@ -6,6 +6,7 @@ import WidgetContainer from "../components/widget-container";
 import PostInfo from "../components/post-info";
 import Share from "../components/share";
 import NavPost from "../components/nav-post";
+import WidgetComment from "../components/widget-comment";
 
 const RowPostWrapper = ({ children }) => (
   <div
@@ -96,6 +97,15 @@ export default ({ data }) => {
           />
         </RowPostWrapper>
 
+        <WidgetComment
+          disqusShortname={data.site.siteMetadata.disqusShortname}
+          disqusConfig={{
+            url: url,
+            identifier: post.fields.slug,
+            title: post.frontmatter.title,
+          }}
+        />
+
       </WidgetContainer>
     </article>
   );
@@ -139,6 +149,7 @@ export const query = graphql`
         title
         siteUrl
         twitterHandle
+        disqusShortname
       }
     }
   }
