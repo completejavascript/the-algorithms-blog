@@ -1,7 +1,6 @@
 import React from "react";
 import WidgetContainer from "../components/widget-container";
 import Helmet from "react-helmet";
-import FacebookProvider, { Comments } from 'react-facebook';
 
 export default ({ data }) => {
   const seoTitle = `Liên hệ - ${data.site.siteMetadata.title}`;
@@ -28,16 +27,6 @@ export default ({ data }) => {
           <li>Facebook Group: <a href={data.site.siteMetadata.fbGroup}>Hỏi đáp thuật toán VN</a></li>
         </ul>
       </WidgetContainer>
-
-      <WidgetContainer>
-        <FacebookProvider appId={data.site.siteMetadata.fbCommentId}>
-          <Comments
-            href={url}
-            width="100%"
-            dataNumposts="5"
-          />
-        </FacebookProvider>
-      </WidgetContainer>
     </article>
   )
 }
@@ -54,7 +43,6 @@ export const query = graphql`
         email
         fbGroup
         siteUrl
-        fbCommentId
       }
     }
   }

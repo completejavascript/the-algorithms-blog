@@ -41,7 +41,10 @@ export default ({ data }) => {
           { property: 'twitter:card', content: `summary` },
           { property: 'twitter:title', content: `${seoTitle}` },
           { property: 'twitter:url', content: `${url}` },
-          { property: `twitter:description`, content: `${post.excerpt}` }
+          { property: `twitter:description`, content: `${post.excerpt}` },
+          // FB Comment
+          { property: "fb:app_id", content: `${data.site.siteMetadata.fbCommentId}` },
+          { property: "fb:admins", content: `${data.site.siteMetadata.fbId}`}
         ]}
         link={[
           { rel: "canonical", href: `${url}` }
@@ -151,6 +154,7 @@ export const query = graphql`
         siteUrl
         twitterHandle
         fbCommentId
+        fbId
       }
     }
   }

@@ -3,7 +3,6 @@ import { rhythm } from "../utils/typography";
 import Helmet from "react-helmet";
 import profile from "../images/profile_phamvanlam-com-co-dien.jpg";
 import WidgetContainer from "../components/widget-container";
-import FacebookProvider, { Comments } from 'react-facebook';
 
 export default ({ data }) => {
   const seoTitle = `Giới thiệu - ${data.site.siteMetadata.title}`;
@@ -43,16 +42,6 @@ export default ({ data }) => {
           Phạm Văn Lâm.
       </p>
       </WidgetContainer>
-
-      <WidgetContainer>
-        <FacebookProvider appId={data.site.siteMetadata.fbCommentId}>
-          <Comments
-            href={url}
-            width="100%"
-            dataNumposts="5"
-          />
-        </FacebookProvider>
-      </WidgetContainer>
     </article>
   )
 }
@@ -66,7 +55,6 @@ export const query = graphql`
         subtitle
         description
         keywords
-        fbCommentId
       }
     }
   }
