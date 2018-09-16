@@ -35,23 +35,15 @@ export const GridColumn = styled.div`
 
   ${({ xs }) => xs ? getWidthString(xs) : "width: 100%"};
 
-  ${props => props.mobileHidden && css`
-    display: none !important;
-  `}
-
-  @media only screen and (min-width: 768px) {
+  @media (min-width: 768px) {
     ${({ sm }) => sm && getWidthString(sm)};
-
-    ${props => props.mobileHidden && css`
-      display: initial !important;
-    `}
   }
 
-  @media only screen and (min-width: 992px) {
+  @media (min-width: 992px) {
     ${({ md }) => md && getWidthString(md)};
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media (min-width: 1200px) {
     ${({ lg }) => lg && getWidthString(lg)};
   }
 `

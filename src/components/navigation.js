@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import { rhythm } from "../utils/typography";
 import { GridContainer, GridRow, GridColumn } from "../components/grid";
+import "./navigation.css";
 
 const linkStyle = {
   float: `right`,
@@ -25,7 +26,7 @@ export default (props) => (
           height: '100%'
         }}
       >
-        <GridColumn sm="8" mobileHidden>
+        <GridColumn sm="8" className="mobileHidden">
           <Link to={`/`}>
             <p
               style={{

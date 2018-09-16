@@ -1,0 +1,9 @@
+.mobileHidden {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .mobileHidden {
+    display: initial !important;
+  }
+}
