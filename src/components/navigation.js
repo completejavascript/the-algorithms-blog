@@ -25,7 +25,7 @@ export default (props) => (
           height: '100%'
         }}
       >
-        <GridColumn md="8" sm="12" xs="12" mobileHidden>
+        <GridColumn sm="8" xs="12" mobileHidden>
           <Link to={`/`}>
             <p
               style={{
@@ -41,7 +41,7 @@ export default (props) => (
             </p>
           </Link>
         </GridColumn>
-        <GridColumn md="4" sm="12" xs="12">
+        <GridColumn sm="4" xs="12">
           <Link style={linkStyle} to={`/lien-he/`}>Liên hệ</Link>
           <Link style={linkStyle} to={`/gioi-thieu/`}>Giới thiệu</Link>
           <Link style={linkStyle} to={`/`}>Trang chủ</Link>
