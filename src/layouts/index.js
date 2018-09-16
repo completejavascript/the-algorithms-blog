@@ -33,16 +33,12 @@ const Footer = props => (
       fontSize: `${rhythm(0.55)}`
     }}
   >
-    <GridContainer
-      style={{
-        textAlign: `center`
-      }}
-    >
-      <p style={{margin: "0"}}>
+    <GridContainer>
+      <p style={{margin: "0", textAlign: `center`}}>
         Copyright © 2016-2018 by <a href="http://about.phamvanlam.com">Lam Pham</a>.{" "}
         Powered by <a href="https://www.gatsbyjs.org">Gatsby</a>.
       </p>
-      <p style={{margin: "0"}}>
+      <p style={{margin: "0", textAlign: `center`}}>
         The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.{" "}
         The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
       </p>
