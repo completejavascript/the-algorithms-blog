@@ -1,6 +1,5 @@
 import React from "react";
 import { rhythm } from "../utils/typography";
-import { DiscussionEmbed } from 'disqus-react';
 
 export default props => {
 
