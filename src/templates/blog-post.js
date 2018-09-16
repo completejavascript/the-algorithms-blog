@@ -97,14 +97,7 @@ export default ({ data }) => {
           />
         </RowPostWrapper>
 
-        <WidgetComment
-          disqusShortname={data.site.siteMetadata.disqusShortname}
-          disqusConfig={{
-            url: url,
-            identifier: post.fields.slug,
-            title: post.frontmatter.title,
-          }}
-        />
+        <WidgetComment />
 
       </WidgetContainer>
     </article>
@@ -149,7 +142,6 @@ export const query = graphql`
         title
         siteUrl
         twitterHandle
-        disqusShortname
       }
     }
   }

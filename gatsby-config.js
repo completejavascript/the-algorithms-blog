@@ -12,7 +12,6 @@ module.exports = {
     pageLength: 6,
     lang: `vi`,
     fbPageId: `250233488967049`,
-    disqusShortname: `algorithms-blog`
   },
   pathPrefix: `/the-algorithms-blog`,
   plugins: [
