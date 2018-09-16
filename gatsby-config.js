@@ -12,6 +12,8 @@ module.exports = {
     pageLength: 6,
     lang: `vi`,
     fbPageId: `250233488967049`,
+    fbCommentId: `728566430818562`,
+    fbId: `100013577851883`
   },
   pathPrefix: `/the-algorithms-blog`,
   plugins: [

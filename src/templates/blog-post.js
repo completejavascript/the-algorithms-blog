@@ -42,6 +42,9 @@ export default ({ data }) => {
           { property: 'twitter:title', content: `${seoTitle}` },
           { property: 'twitter:url', content: `${url}` },
           { property: `twitter:description`, content: `${post.excerpt}` },
+          // Fb comment
+          { property: "fb:app_id", content: `${data.site.siteMetadata.fbCommentId}` },
+          { property: "fb:admins", content: `${data.site.siteMetadata.fbId}` },
         ]}
         link={[
           { rel: "canonical", href: `${url}` }
@@ -97,7 +100,12 @@ export default ({ data }) => {
           />
         </RowPostWrapper>
 
-        <WidgetComment />
+        <WidgetComment 
+          config={{
+            fbCommentId: data.site.siteMetadata.fbCommentId,
+            url
+          }}
+        />
 
       </WidgetContainer>
     </article>
@@ -142,6 +150,8 @@ export const query = graphql`
         title
         siteUrl
         twitterHandle
+        fbCommentId
+        fbId
       }
     }
   }
