@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "gatsby-link";
 import { rhythm } from "../utils/typography";
-import { GridContainer, GridRow, GridColumn } from "../components/grid";
+// import { GridContainer, GridRow, GridColumn } from "../components/grid";
+import "./grid.css";
 import "./navigation.css";
 
 const linkStyle = {
@@ -18,15 +19,15 @@ export default (props) => (
       height: `${props.height}px`
     }}
   >
-    <GridContainer>
-      <GridRow
+    <div className="gr-container">
+      <div className="gr-row"
         style={{
           backgroundColor: `#FFF`,
           margin: `0 auto`,
           height: '100%'
         }}
       >
-        <GridColumn sm="8" className="mobileHidden">
+        <div className="mobileHidden gr-col-sm-8">
           <Link to={`/`}>
             <p
               style={{
@@ -41,13 +42,13 @@ export default (props) => (
               {props.title}
             </p>
           </Link>
-        </GridColumn>
-        <GridColumn sm="4" xs="12">
+        </div>
+        <div className="gr-col-sm-4 gr-col-xs-12">
           <Link style={linkStyle} to={`/lien-he/`}>Liên hệ</Link>
           <Link style={linkStyle} to={`/gioi-thieu/`}>Giới thiệu</Link>
           <Link style={linkStyle} to={`/`}>Trang chủ</Link>
-        </GridColumn>
-      </GridRow>
-    </GridContainer>
+        </div>
+      </div>
+    </div>
   </nav>
 )
