@@ -25,7 +25,7 @@ export default (props) => (
           height: '100%'
         }}
       >
-        <GridColumn sm="8" xs="12" mobileHidden>
+        <GridColumn sm="8" mobileHidden>
           <Link to={`/`}>
             <p
               style={{
