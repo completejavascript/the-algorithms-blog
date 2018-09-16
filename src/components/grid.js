@@ -1,49 +1,41 @@
-import { rhythm } from "../utils/typography";
-import styled, { css } from "styled-components";
+import React from "react";
+import "./grid.css";
 
-export const GridContainer = styled.div`
-  width: 1024px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding-left: 0.35rem;
-  padding-right: 0.35rem;
-`
-
-export const GridContainerFull = styled.div`
-  width: 100%;
-  margin: 0 auto;
-`
-
-export const GridRow = styled.div`
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-`
-
-const getWidthString = span => {
-  if (!span) return;
-
-  const width = span / 12 * 100;
-  return `width: ${width}%`;
+export function GridContainerFull( {children}) {
+  return (
+    <div className="gr-container-full">
+      {children}
+    </div>
+  )
 }
 
-export const GridColumn = styled.div`
-  float: left;
-  padding: ${rhythm(0.3)};
+export function GridContainer({ children }) {
+  return (
+    <div className="gr-container">
+      {children}
+    </div>
+  )
+}
 
-  ${({ xs }) => xs ? getWidthString(xs) : "width: 100%"};
+export function GridRow({ children }) {
+  return (
+    <div className="gr-row">
+      {children}
+    </div>
+  )
+}
 
-  @media (min-width: 768px) {
-    ${({ sm }) => sm && getWidthString(sm)};
-  }
+export function GridColumn({ xs, sm, md, lg, children, className }) {
+  let colClassName = className;
+  
+  xs && (colClassName += ` gr-col-xs-${xs}`);
+  sm && (colClassName += ` gr-col-sm-${sm}`);
+  md && (colClassName += ` gr-col-md-${md}`);
+  lg && (colClassName += ` gr-col-lg-${lg}`);
 
-  @media (min-width: 992px) {
-    ${({ md }) => md && getWidthString(md)};
-  }
-
-  @media (min-width: 1200px) {
-    ${({ lg }) => lg && getWidthString(lg)};
-  }
-`
+  return (
+    <div className={colClassName}>
+      {children}
+    </div>
+  )
+}

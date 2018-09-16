@@ -10,7 +10,6 @@ import { GridContainer, GridRow, GridColumn } from "../components/grid";
 import Helmet from "react-helmet";
 import './index.css';
 import favicon from "../images/favicon.ico";
-import "../components/grid.css";
 
 const NAV_HEIGHT = 64;
 
@@ -34,7 +33,7 @@ const Footer = props => (
       fontSize: `${rhythm(0.55)}`
     }}
   >
-    <div className="gr-container"
+    <GridContainer
       style={{
         textAlign: `center`
       }}
@@ -47,7 +46,7 @@ const Footer = props => (
         The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.{" "}
         The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
       </p>
-    </div>
+    </GridContainer>
   </footer>
 );
 
@@ -68,13 +67,13 @@ export default ({ children, data }) => (
       height={NAV_HEIGHT}
     />
 
-    <div className="gr-container">
-      <div className="gr-row">
-        <div className="gr-col-md-8 gr-col-sm-12 gr-col-xs-12">
+    <GridContainer>
+      <GridRow>
+        <GridColumn md={8} sm={12} xs={12}>
           {children()}
-        </div>
+        </GridColumn>
 
-        <div className="gr-col-md-4 gr-col-sm-12 gr-col-xs-12">
+        <GridColumn md={4} sm={4} xs={12}>
           <SideBar
             categories={data.topics.edges}
             tags={data.topics.edges}
@@ -85,9 +84,9 @@ export default ({ children, data }) => (
               fbPageId: data.site.siteMetadata.fbPageId
             }}
           />
-        </div>
-      </div>
-    </div>
+        </GridColumn>
+      </GridRow>
+    </GridContainer>
 
     <Footer />
   </div>
