@@ -38,10 +38,10 @@ export default ({ data }) => {
           { property: `og:type`, content: `website` },
           { property: `og:description`, content: `${post.excerpt}` },
           // Twitter Card
-          { property: 'twitter:card', content: `summary` },
-          { property: 'twitter:title', content: `${seoTitle}` },
-          { property: 'twitter:url', content: `${url}` },
-          { property: `twitter:description`, content: `${post.excerpt}` },
+          { name: 'twitter:card', content: `summary` },
+          { name: 'twitter:title', content: `${seoTitle}` },
+          { name: 'twitter:url', content: `${url}` },
+          { name: `twitter:description`, content: `${post.excerpt}` },
           // Fb comment
           { property: "fb:app_id", content: `${data.site.siteMetadata.fbCommentId}` },
           { property: "fb:admins", content: `${data.site.siteMetadata.fbId}` },
