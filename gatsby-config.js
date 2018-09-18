@@ -13,7 +13,17 @@ module.exports = {
     lang: `vi`,
     fbPageId: `250233488967049`,
     fbCommentId: `728566430818562`,
-    fbId: `100013577851883`
+    fbId: `100013577851883`,
+    siteLinks: [
+      {
+        text: "Lam Pham Blog", 
+        link: "https://phamvanlam.com/",
+      },
+      {
+        text: "Complete JavaScript", 
+        link: "https://completejavascript.com/",
+      },
+    ],
   },
   pathPrefix: `/the-algorithms-blog`,
   plugins: [

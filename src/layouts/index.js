@@ -6,6 +6,7 @@ import WidgetLatestPost from "../components/widget-latestpost";
 import WidgetGoogleSearch from "../components/widget-search";
 import WidgetFacebook from "../components/widget-facebook";
 import WidgetTagCloud from "../components/widget-tag-cloud";
+import WidgetSiteLinks from "../components/widget-site-links";
 import { GridContainer, GridRow, GridColumn } from "../components/grid";
 import Helmet from "react-helmet";
 import './index.css';
@@ -20,6 +21,7 @@ const SideBar = props => (
     <WidgetLatestPost latestPosts={props.latestPosts} />
     <WidgetFacebook fbConfig={props.fbConfig}/>
     <WidgetTagCloud tags={props.tags} />
+    <WidgetSiteLinks siteLinks={props.siteLinks} />
   </aside>
 );
 
@@ -79,6 +81,7 @@ export default ({ children, data }) => (
               fanpage: data.site.siteMetadata.fanpage,
               fbPageId: data.site.siteMetadata.fbPageId
             }}
+            siteLinks={data.site.siteMetadata.siteLinks}
           />
         </GridColumn>
       </GridRow>
@@ -97,6 +100,10 @@ export const query = graphql`
         lang
         fanpage
         fbPageId
+        siteLinks {
+          text
+          link
+        }
       }
     }
     topics: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date] }) {
@@ -111,7 +118,7 @@ export const query = graphql`
     }
     latestPosts: allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___date] }
-      limit: 10
+      limit: 8
     ) {
       edges {
         node {
