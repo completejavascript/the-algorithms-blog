@@ -69,7 +69,7 @@ export default ({ children, data }) => (
           {children()}
         </GridColumn>
 
-        <GridColumn md={4} sm={4} xs={12}>
+        <GridColumn md={4} sm={12} xs={12}>
           <SideBar
             categories={data.topics.edges}
             tags={data.topics.edges}
