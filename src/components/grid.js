@@ -25,13 +25,14 @@ export function GridRow({ children }) {
   )
 }
 
-export function GridColumn({ xs, sm, md, lg, children, className }) {
+export function GridColumn({ xs, sm, md, lg, xl, children, className }) {
   let colClassName = className;
   
   xs && (colClassName += ` gr-col-xs-${xs}`);
   sm && (colClassName += ` gr-col-sm-${sm}`);
   md && (colClassName += ` gr-col-md-${md}`);
   lg && (colClassName += ` gr-col-lg-${lg}`);
+  xl && (colClassName += ` gr-col-xl-${xl}`);
 
   return (
     <div className={colClassName}>
