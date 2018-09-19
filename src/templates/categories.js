@@ -3,6 +3,7 @@ import { rhythm } from "../utils/typography";
 import Helmet from "react-helmet";
 import ArticleList from "../components/article-list";
 import NavPage from "../components/widget-navpage";
+import { getRobotIndexTag } from "../utils/functions";
 
 export default ({ pathContext, data }) => {
   const { group, index, pageCount, additionalContext, pathPrefix } = pathContext;
@@ -13,10 +14,12 @@ export default ({ pathContext, data }) => {
     <div style={{ marginTop: `${rhythm(1 / 2)}` }}>
       <Helmet
         title={`${categoryTitle} - ${data.site.siteMetadata.title}`}
-        meta={[
-          { name: 'description', content: `${data.site.siteMetadata.description}` },
-          { name: 'keywords', content: `${data.site.siteMetadata.keywords}` },
-        ]}
+        meta={
+          [
+            { name: 'description', content: `${data.site.siteMetadata.description}` },
+            { name: 'keywords', content: `${data.site.siteMetadata.keywords}` },
+          ].concat(getRobotIndexTag(index))
+        }
       />
 
       <ArticleList
