@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `http://thuattoan.phamvanlam.com`,
+    siteUrl: `https://thuattoan.phamvanlam.com`,
     title: `Algorithms Blog`,
     subtitle: `Chia sẻ về thuật toán và lời giải các bài toán cơ bản`,
     description: `Blog này được lập nên với mục đích chia sẻ những kiến thức và kinh nghiệm của bản thân về các thuật toán và lời giải các bài toán cơ bản trên các trang như spoj.com, acm.timus.ru,…`,
@@ -82,6 +82,12 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sitemap`
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     },
   ],
 };
