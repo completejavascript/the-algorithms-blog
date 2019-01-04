@@ -37,7 +37,7 @@ const Footer = props => (
   >
     <GridContainer>
       <p style={{margin: "0", textAlign: `center`}}>
-        Copyright © 2016-2018 by <a href="http://about.phamvanlam.com">Lam Pham</a>.{" "}
+        Copyright © 2016-2019 by <a href="http://about.phamvanlam.com">Lam Pham</a>.{" "}
         Powered by <a href="https://www.gatsbyjs.org">Gatsby</a>.
       </p>
       <p style={{margin: "0", textAlign: `center`}}>
