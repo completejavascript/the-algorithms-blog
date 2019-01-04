@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://thuattoan.phamvanlam.com/sitemap.xml
+Host: https://thuattoan.phamvanlam.com
