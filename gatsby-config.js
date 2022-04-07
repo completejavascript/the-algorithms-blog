@@ -7,7 +7,7 @@ module.exports = {
     keywords: `thuat-toan, thuattoan, algorithms, spoj`,
     fanpage: `https://www.facebook.com/Onluyenthuattoan/`,
     fbGroup: `https://www.facebook.com/groups/HoiDapThuatToanVN/`,
-    email: 'lampv606@gmail.com',
+    email: "lampv606@gmail.com",
     twitterHandle: `@CmpltJavaScript`,
     pageLength: 6,
     lang: `vi`,
@@ -16,15 +16,15 @@ module.exports = {
     fbId: `100013577851883`,
     siteLinks: [
       {
-        text: "Lam Pham Blog", 
+        text: "Lam Pham Blog",
         link: "https://phamvanlam.com/",
       },
       {
-        text: "Complete JavaScript", 
+        text: "Complete JavaScript",
         link: "https://completejavascript.com/",
       },
       {
-        text: "Portfolio", 
+        text: "Portfolio",
         link: "http://about.phamvanlam.com/",
       },
     ],
@@ -41,21 +41,21 @@ module.exports = {
           {
             resolve: "gatsby-remark-embed-gist",
             options: {
-              username: 'completejavascript',
-              includeDefaultCss: true
-            }
+              username: "completejavascript",
+              includeDefaultCss: true,
+            },
           },
           {
-          resolve: `gatsby-remark-images`,
-          options: {
-            // It's important to specify the maxWidth (in pixels) of
-            // the content container as this plugin uses this as the
-            // base for generating different widths of each image.
-            maxWidth: 590,
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+            },
           },
-        },
-        ]
-      }
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-typography`,
@@ -73,7 +73,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-96543695-4",
+        trackingId: "UA-96543695-6",
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
@@ -85,13 +85,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-sitemap`
+      resolve: `gatsby-plugin-sitemap`,
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
   ],
 };
